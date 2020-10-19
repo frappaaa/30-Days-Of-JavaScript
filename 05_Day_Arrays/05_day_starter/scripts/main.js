@@ -1,5 +1,4 @@
 console.log(countries)
-console.log(webTechs)
 console.log('Open the browser console whenever you work on JavaScript')
 console.log('Open the console and check if the countries has been loaded')
 //LVL 1
@@ -110,3 +109,58 @@ console.log(itCompanies.pop())
 console.log(itCompanies.splice())
 //LVL2
 //1
+console.log(webTechs)
+//2
+let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+let words
+for (let i = 0; i < text.length; i++) {
+    if (text[i] != '.' && text[i] != ',') {
+        words += text[i]
+    }
+}
+words = words.split(' ')
+console.log(words)
+console.log(words.length)
+//3
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+shoppingCart.unshift('Meat')
+shoppingCart.push('Sugar')
+shoppingCart.splice(shoppingCart.indexOf('Honey'), 1)
+shoppingCart.splice(shoppingCart.indexOf('Tea'), 1, 'Green Tea')
+//4
+if (countries.includes('Ethiopia')) {
+    console.log(countries[countries.indexOf('Ethiopia')].toUpperCase())
+} else {
+    countries.push('Ethiopia')
+}
+//5
+if (webTechs.includes('Sass')) {
+    console.log('Sass is a CSS preprocess')
+} else {
+    webTechs.push('Sass')
+    webTechs.sort()
+    console.log(webTechs)
+}
+//6
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node', 'Express', 'MongoDB']
+const fullStack = frontEnd.concat(backEnd)
+console.log(fullStack)
+//LVL3
+//1
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort()
+console.log(ages[0])
+console.log(ages[ages.length - 1])
+console.log(ages[Math.floor(ages.length / 2)])
+console.log(ages[ages.length - 1] - ages[0])
+//2
+console.log(countries[Math.floor(countries.length / 2)])
+//3
+if (countries.length % 2 == 0) {
+    let countries1 = countries.slice(0, countries.length / 2)
+    let countries2 = countries.slice(countries.length / 2 + 1, countries.length - 1)
+}else{
+    let countries1 = countries.slice(0, countries.length / 2)
+    let countries2 = countries.slice(countries.length / 2 + 1, countries.length - 1)
+}
