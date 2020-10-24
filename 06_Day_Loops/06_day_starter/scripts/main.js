@@ -115,3 +115,5 @@ for (let i = 0; i < 6; i++) {
     randomId += chars[Math.floor(Math.random() * chars.length)]
 }
 console.log(randomId)
+//LVL 2
+//1
