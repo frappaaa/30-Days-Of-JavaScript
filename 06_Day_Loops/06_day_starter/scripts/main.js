@@ -117,3 +117,91 @@ for (let i = 0; i < 6; i++) {
 console.log(randomId)
 //LVL 2
 //1
+let anyRandomId = ''
+let numberRandom = Math.floor(Math.random() * 100)
+var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
+for (let i = 0; i < numberRandom; i++) {
+    anyRandomId += chars[Math.floor(Math.random() * chars.length)]
+}
+console.log(anyRandomId)
+//2
+let exaDec = ''
+var chars = '0123456789ABCDEFabcdef'.split('');
+for (let i = 0; i < 6; i++) {
+    exaDec += chars[Math.floor(Math.random() * chars.length)]
+}
+console.log('#' + exaDec)
+//3
+let rgbNum = ''
+for (let i = 0; i < 3; i++) {
+    rgbNum += Math.floor(Math.random() * 255)
+    if (i < 2) {
+        rgbNum += ', '
+    }
+}
+console.log('rgb(' + rgbNum + ')')
+//4
+let arCoun = []
+const countriesNew = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
+    'Finland',
+    'Germany',
+    'Hungary',
+    'Ireland',
+    'Japan',
+    'Kenya'
+]
+for (let i = 0; i < countriesNew.length; i++) {
+    arCoun.push(countriesNew[i].toUpperCase())
+}
+console.log(arCoun)
+//5
+let arCounNum = []
+for (let i = 0; i < countriesNew.length; i++) {
+    arCounNum.push(countriesNew[i].length)
+}
+console.log(arCounNum)
+//6
+let arCompleto = []
+for (let i = 0; i < countriesNew.length; i++) {
+    arCompleto[i] += [countriesNew[i], countriesNew[i].slice(0, 3).toUpperCase(), countriesNew[i].length]
+}
+console.log(arCompleto)
+//7
+let land = []
+for (let i = 0; i < countriesNew.length; i++) {
+    if (countriesNew[i].includes('land')) {
+        land.push(countriesNew[i])
+    }
+}
+land.length == 0 ? console.log('All these countries are without land') : console.log(land)
+//8
+let ia = []
+for (let i = 0; i < countriesNew.length; i++) {
+    if (countriesNew[i].includes('ia')) {
+        ia.push(countriesNew[i])
+    }
+}
+ia.length == 0 ? console.log('All these countries are without ia') : console.log(ia)
+//9
+let bigWord = ''
+let max = 0
+for (let i = 0; i < countriesNew.length; i++) {
+    if (countriesNew[i].length > max) {
+        max = countriesNew[i].length
+        bigWord = countriesNew[i]
+    }
+}
+console.log(bigWord)
+//10
+let onlyFive = []
+for (let i = 0; i < countriesNew.length; i++) {
+    if (countriesNew[i].length == 5) {
+        onlyFive.push(countriesNew[i])
+    }
+}
+console.log(onlyFive)
