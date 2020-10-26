@@ -205,3 +205,116 @@ for (let i = 0; i < countriesNew.length; i++) {
     }
 }
 console.log(onlyFive)
+//11
+const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+]
+let theLongestWord = ''
+let max1 = 0
+for (let i = 0; i < webTechs.length; i++) {
+    if (webTechs[i].length > max1) {
+        max1 = webTechs[i].length
+        theLongestWord = webTechs[i]
+    }
+}
+console.log(theLongestWord)
+//12 - Quasi ma da migliorare
+let wordLength = []
+let arrayInt = []
+for (let i = 0; i < webTechs.length; i++) {
+    arrayInt.push(webTechs[i])
+    arrayInt.push(webTechs[i].length)
+}
+console.log(wordLength)
+//13
+const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+let mernApp = ''
+for (const lang of mernStack) {
+    mernApp += lang.charAt(0)
+}
+console.log(mernApp)
+//14
+for (const web of webTechs) {
+    console.log(web)
+}
+//15
+let fruit = ['banana', 'orange', 'mango', 'lemon']
+let revFruits = []
+for (let i = fruit.length - 1; i >= 0; i--) {
+    revFruits.push(fruit[i])
+}
+console.log(revFruits)
+//16
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+]
+for (let i = 0; i < fullStack.length; i++) {
+    for (let y = 0; y < fullStack[i].length; y++) {
+        console.log(fullStack[i][y].toUpperCase())
+    }
+}
+//LVL3
+//1
+const countriesCopy = countries
+console.log(countriesCopy)
+//2
+let sortedCountries = countriesCopy.sort()
+console.log(sortedCountries)
+//3
+console.log(webTechs.sort())
+console.log(mernStack.sort())
+//4
+let landArray = []
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].includes('land')) {
+        landArray.push(countries[i])
+    }
+}
+console.log(landArray)
+//5
+let maxChar = []
+let max2 = 0
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].length > max2) {
+        max2 = countries[i].length
+        maxChar.push(countries[i])
+    }
+}
+console.log(maxChar)
+//6
+landArray = []
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].includes('land')) {
+        landArray.push(countries[i])
+    }
+}
+console.log(landArray)
+//7
+let onlyFour = []
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].length == 4) {
+        onlyFour.push(countries[i])
+    }
+}
+console.log(onlyFour)
+//8
+let twoOrMore = []
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].includes(' ')) {
+        twoOrMore.push(countries[i])
+    }
+}
+console.log(twoOrMore)
+//9
+let reversedCountries = countries.reverse()
+for (let i = 0; i < reversedCountries.length; i++) {
+    reversedCountries[i] = reversedCountries[i].charAt(0).toUpperCase() + reversedCountries[i].slice(1).toLowerCase()
+}
+console.log(reversedCountries)
