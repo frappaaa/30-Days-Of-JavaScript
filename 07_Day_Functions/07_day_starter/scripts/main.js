@@ -283,3 +283,22 @@ function randomUserIp() {
 }
 randomUserIp()
 //16
+let hex = Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F')
+function randomMacIp() {
+    return macIp = hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)] + ':' + hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)] + ':' + hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)] + ':' + hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)]
+}
+randomMacIp()
+//17
+function randomHexaNumberGenerator() {
+    return colorHex = '#' + hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)] + '' + hex[Math.floor(Math.random() * 22)]
+}
+randomHexaNumberGenerator()
+//18
+function userIdGenerator() {
+    let iD = ''
+    for (let i = 0; i < 7; i++) {
+        iD += hex[Math.floor(Math.random() * 22)]
+    }
+    return iD
+}
+userIdGenerator()
