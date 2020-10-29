@@ -132,4 +132,40 @@ function printArray(array) {
 }
 printArray(arrToBePrinted)
 //4
+function showDateTime() {
+    let date = new Date()
+    console.log(date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear() + ' ' + date.getHours() > 10 ? date.getHours() : '0' + date.getHours() + ':' + date.getMinutes() > 10 ? date.getMinutes() : '0' + date.getMinutes())
+}
+showDateTime()
+//5
+function swapValues(x, y) {
+    let swap = x
+    x = y
+    y = swap
+    console.log('x => ' + x + ', y => ' + y)
+}
+swapValues(3, 4)
+//6
+function reverseArray(array) {
+    let arrayRev = []
+    for (let i = array.length - 1; i >= 0; i--) {
+        arrayRev.push(array[i])
+    }
+    return arrayRev
+}
+console.log(reverseArray([1, 2, 3, 4, 5]))
+//7
+function capitalizeArray(array) {
+    for (let i = array.length - 1; i >= 0; i--) {
+        array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1).toLowerCase()
+    }
+    return array
+}
+console.log(capitalizeArray(['ciAo', 'baRCeLLONA', 'Tokyo', 'francesco']))
+//8
+function addItem(array, item) {
+    array.push(item)
+    return array
+}
+console.log(addItem(['ciAo', 'baRCeLLONA', 'Tokyo', 'francesco'], 'sette'))
 
