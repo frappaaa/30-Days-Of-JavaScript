@@ -168,4 +168,83 @@ function addItem(array, item) {
     return array
 }
 console.log(addItem(['ciAo', 'baRCeLLONA', 'Tokyo', 'francesco'], 'sette'))
-
+//9
+const removeItem = (arr, index) => {
+    arr.splice(index, 1)
+    console.log(arr)
+}
+removeItem()
+//10
+function sumOfNumbers() {
+    let sumOf = 0
+    for (const number of arguments) {
+        sumOf += number
+    }
+    return sumOf
+}
+sumOfNumbers(1, 4, 10)
+//11
+const sumOfOdds = (a, b) => {
+    let sumOdds = 0
+    if (a > b) {
+        let c = a
+        b = a
+        a = c
+    }
+    for (let i = a; i <= b; i++) {
+        if (i % 2 != 0) {
+            sumOdds += i
+            console.log(i)
+        }
+    }
+    return sumOdds
+}
+sumOfOdds(10, 20)
+//12
+//11
+const sumOfEvem = (a, b) => {
+    let sumEven = 0
+    if (a > b) {
+        let c = a
+        b = a
+        a = c
+    }
+    for (let i = a; i <= b; i++) {
+        if (i % 2 == 0) {
+            sumEven += i
+            console.log(i)
+        }
+    }
+    return sumEven
+}
+sumOfEvem(10, 20)
+//13
+function evensAndOdds(integer) {
+    let numberEvens = 0
+    let numberOdds = 0
+    for (let i = 0; i <= integer; i++) {
+        if (i % 2 == 0) {
+            numberEvens++
+        } else {
+            numberOdds++
+        }
+    }
+    console.log('The number of odds are ' + numberOdds)
+    console.log('The number of evens are ' + numberEvens)
+}
+evensAndOdds(100)
+//14
+function evensAndOdds() {
+    let sumOfArg = 0
+    for (const number of arguments) {
+        sumOfArg += number
+    }
+    return sumOfArg
+}
+evensAndOdds(1, 2, 3)
+//15
+function randomUserIp() {
+    console.log(Math.floor(Math.random() * 256) + ':' + Math.floor(Math.random() * 256) + ':' + Math.floor(Math.random() * 256) + ':' + Math.floor(Math.random() * 256))
+}
+randomUserIp()
+//16
