@@ -302,3 +302,60 @@ function userIdGenerator() {
     return iD
 }
 userIdGenerator()
+//LVL3
+//1
+let alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split('');
+function userIdGeneratedByUser() {
+    let numOf = prompt('Quanti caratteri deve avere l\'ID che vuoi creare?')
+    let ids = prompt('Quanti ID vuoi creare?')
+
+    for (let i = 0; i < ids; i++) {
+        let id = ''
+        for (let y = 0; y < numOf; y++) {
+            id += alphabet[Math.floor(Math.random() * (alphabet.length + 1))]
+        }
+        console.log(id)
+    }
+}
+userIdGeneratedByUser()
+//2
+function rgbColorGenerator() {
+    console.log('rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')')
+}
+rgbColorGenerator()
+//3
+function arrayOfHexaColors(num) {
+    let arrayHex = []
+    for (let i = 0; i < num; i++) {
+        hexCol = '#'
+        for (let y = 0; y < 6; y++) {
+            hexCol += hex[Math.floor(Math.random() * 22)]
+        }
+        arrayHex.push(hexCol)
+    }
+    return arrayHex
+}
+arrayOfHexaColors(10)
+//4
+function arrayOfRgbColors(num) {
+    arrayRGB = []
+    for (let i = 0; i < num; i++) {
+        rgbCol = 'rgb('
+        for (let y = 0; y < 3; y++) {
+            rgbCol += Math.floor(Math.random() * 256)
+            if (y < 2) {
+                rgbCol += ','
+            } else {
+                rgbCol += ')'
+            }
+        }
+        arrayRGB.push(rgbCol)
+    }
+    return arrayRGB
+}
+arrayOfRgbColors(10)
+//5
+function convertHexaToRgb(hex) {
+
+}
+arrayOfHexaColors('#ee4455')
