@@ -236,7 +236,6 @@ const sumOfOdds = (a, b) => {
 }
 sumOfOdds(10, 20)
 //12
-//11
 const sumOfEvem = (a, b) => {
     let sumEven = 0
     if (a > b) {
@@ -356,6 +355,191 @@ function arrayOfRgbColors(num) {
 arrayOfRgbColors(10)
 //5
 function convertHexaToRgb(hex) {
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+        return r + r + g + g + b + b;
+    });
+
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+convertHexaToRgb('#ee4455')
+//6
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function convertRgbToHexa(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+convertRgbToHexa(0, 51, 255)
+//7
+function generateColors(type, numOf) {
+    if (type == 'hexa') {
+        let arrayHex = []
+        for (let i = 0; i < numOf; i++) {
+            hexCol = '#'
+            for (let y = 0; y < 6; y++) {
+                hexCol += hex[Math.floor(Math.random() * 22)]
+            }
+            arrayHex.push(hexCol)
+        }
+        return arrayHex
+    } else if (type == 'rgb') {
+        arrayRGB = []
+        for (let i = 0; i < numOf; i++) {
+            rgbCol = 'rgb('
+            for (let y = 0; y < 3; y++) {
+                rgbCol += Math.floor(Math.random() * 256)
+                if (y < 2) {
+                    rgbCol += ','
+                } else {
+                    rgbCol += ')'
+                }
+            }
+            arrayRGB.push(rgbCol)
+        }
+        return arrayRGB
+    } else {
+        console.log('Non hai inserito dei dati validi')
+    }
 
 }
-arrayOfHexaColors('#ee4455')
+generateColors('hexa', 4)
+//8
+function shuffleArray(array) {
+    shuffled = []
+    for (let i = 0; i < array.length; i++) {
+        shuffled.push(array[Math.floor(Math.random() * (array.length + 1))])
+    }
+    return shuffled
+}
+shuffleArray([1, 2, 3, 4])
+//9
+function factorial(num) {
+    fac = 1
+    for (let i = num; i > 0; i--) {
+        fac *= i
+    }
+    return fac
+}
+factorial(4)
+//10
+function isEmpty(par) {
+    if (!par || par === "" || par === undefined) {
+        console.log('Il parametro che hai inserito è vuoto')
+    } else {
+        console.log('Il parametro che hai inserito non è vuoto e il suo valore è "' + par + '"')
+    }
+}
+let greetings
+isEmpty(greetings)
+isEmpty(greetings = 'ciao')
+//11
+function sum() {
+    let Sum = 0
+    for (const argument of arguments) {
+        Sum += argument
+    }
+    return Sum
+}
+sum(1, 4, 6)
+//12
+function sumOfArrayItems(arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (isNaN(arr[i])) {
+            console.log('Tra i valori che hai inserito ci sono dei valori non numerici, controlla e riprova')
+            break
+        } else {
+            sum += arr[i]
+        }
+    }
+    return sum
+}
+sumOfArrayItems(['ciao', 1, 2, 3])
+sumOfArrayItems([1, 2, 3])
+sumOfArrayItems([1, 2, 3, 'ciao'])
+//13
+function avarage() {
+    let sum = 0
+    for (const arg of arguments) {
+        sum += arg
+    }
+    av = sum / arguments.length
+    return av
+}
+avarage(3, 5, 7)
+//14
+function modifyArray(arr) {
+    if (arr.length >= 5) {
+        arr[4] = arr[4].toUpperCase()
+        return arr
+    } else {
+        console.log('Item not found')
+    }
+}
+modifyArray(['Avocado', 'Tomato', 'Potato', 'Mango', 'Lemon', 'Carrot'])
+modifyArray(['Google', 'Facebook', 'Apple', 'Amazon'])
+//15
+function isPrime(num) {
+    for (let i = 2; i < num; i++)
+        if (num % i === 0) return false;
+    return num > 1;
+}
+isPrime(5)
+//16 - da controllare
+function areUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
+areUnique([1, 2, 3, 4, 2])
+areUnique([1, 2, 3, 4, 5])
+//17
+function sameType() {
+    let a = arguments[0]
+    for (let i = 0; i < arguments.length; i++) {
+        if (typeof arguments[i] != typeof a) {
+            console.log('Questi elementi sono diversi')
+        } else {
+            console.log('Questi elementi sono uguali')
+        }
+    }
+}
+sameType(3, 4, 'ciao')
+//18
+function isValidVariable(varia) {
+    if (varia) {
+        console.log('La variabile inserita non è valida')
+    }
+}
+isValidVariable('ciao£')
+//19 - non funziona
+function sevenRandom() {
+    let arrSeven = []
+    for (let i = 0; i < 8; i++) {
+        num = Math.floor(Math.random() * 10)
+        if (i > 0 && !arrSeven.includes(arrSeven[i - 1])) {
+            arrSeven.push(num)
+        } else {
+            arrSeven.push(num)
+        }
+    }
+    return arrSeven
+}
+sevenRandom()
+//20
+function reverseCountries(countries) {
+    let revCountries = []
+    for (let i = countries.length; i >= 0; i--) {
+        revCountries.push(countries[i])
+    }
+    return revCountries
+}
+reverseCountries(countries)
