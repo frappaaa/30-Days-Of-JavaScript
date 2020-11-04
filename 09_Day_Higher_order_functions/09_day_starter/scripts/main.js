@@ -54,4 +54,61 @@ names.forEach(name => console.log(name))
 //5
 numbers.forEach(num => console.log(num))
 //6
-
+let countriesUpper = countriesShort.map(country => country.toUpperCase())
+//7
+let countriesLength = countriesShort.map(country => country)
+//8
+let squareNum = numbers.map(num => num ** 2)
+console.log(squareNum)
+//9
+let namesUpper = names.map(name => name.toUpperCase())
+console.log(namesUpper)
+//10
+let mapProducts = products.map(product => [product.product, product.price])
+console.log(mapProducts)
+//11
+let filterLand = countriesShort.filter(country => country.includes('land'))
+console.log(filterLand)
+//12
+let filterSix = countriesShort.filter(country => country.length == 6)
+console.log(filterSix)
+//13
+let filterSixMore = countriesShort.filter(country => country.length >= 6)
+console.log(filterSixMore)
+//14
+let filterStartE = countriesShort.filter(country => country.charAt(0) == 'E')
+console.log(filterStartE)
+//15
+let filterPrices = products.filter(product => product.price != null && product.price != undefined && product.price != ' ' && product.price != '')
+console.log(filterPrices)
+//16
+function getStringLists(array) {
+    return stringArray = array.filter(item => typeof item === 'string')
+}
+console.log(getStringLists([1, 2, 3, 'ciao', 'come stai', 'bello vederti']))
+//17
+let sumOfAll = numbers.reduce((acc, cur) => acc + cur, 0)
+console.log(sumOfAll)
+//18
+let concatenate = countriesShort.reduce((acc, cur) => {
+    return acc + ', ' + cur
+})
+console.log(concatenate + ' are North European countries')
+//19
+//every - serve per controllare se tutti gli elementi condividono una caratteristica, un aspetto, e ritorna un valore booleano
+//some - serve per controllare se alcuni gli elementi condividono una caratteristica, un aspetto, e ritorna un valore booleano
+//20
+console.log(names.some(name => name.length > 7))
+//21
+console.log(countriesShort.every(country => country.includes('land')))
+//22
+//find - serve per controllare se una tale condizione viene rispettata da almeno un elemento dell'array inserito e ne restituisce il primo
+//findIndex - serve per controllare se una tale condizione viene rispettata da almeno un elemento dell'array inserito e ne restituisce l'indice
+//23
+console.log(countriesShort.find(country => country.length == 6))
+//24
+console.log(countriesShort.findIndex(country => country.length == 6))
+//25
+console.log(countriesShort.findIndex(country => country == 'Norway'))
+//26
+console.log(countriesShort.findIndex(country => country == 'Russia'))
