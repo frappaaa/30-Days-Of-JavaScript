@@ -153,6 +153,13 @@ console.log(countries.map(ele => ele.capital).sort())
 console.log(countries.map(ele => ele.population).sort((a, b) => a - b))
 //2 - da controllare
 function mostSpokenLanguages(arr, num) {
+    let languages = arr.map(country => country.languages)
+    const counts = []
+    for (const lang of languages) {
+        const filteredLang = languages.filter(lng => lng === lang)
+        counts.push({ lang: lang, count: filteredLang.length })
+    }
+    console.log(counts)
 
 }
 mostSpokenLanguages(countries, 10)

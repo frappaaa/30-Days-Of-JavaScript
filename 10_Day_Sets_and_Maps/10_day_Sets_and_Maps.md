@@ -433,15 +433,12 @@ const countries = ['Finland', 'Sweden', 'Norway']
 
    // Your output should look like this
    console.log(mostSpokenLanguages(countries, 3))
-   ```
-
-[
-{'English':91},
-{'French':45},
-{'Arabic':25}
-]
-
-```
+    [
+    {'English':91},
+    {'French':45},
+    {'Arabic':25}
+    ]
+  ```
 
 
 🎉 CONGRATULATIONS ! 🎉
