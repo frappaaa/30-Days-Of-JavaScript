@@ -112,3 +112,54 @@ console.log(countriesShort.findIndex(country => country.length == 6))
 console.log(countriesShort.findIndex(country => country == 'Norway'))
 //26
 console.log(countriesShort.findIndex(country => country == 'Russia'))
+//LVL2
+//1
+let totalPrice = products.filter(product => typeof product.price != 'string').map(product => product.price).reduce((acc, cur) => acc + cur, 0)
+console.log(totalPrice)
+//2 - da controllare
+console.log(products.reduce((acc, cur) => acc + cur.price, 0))
+//3
+function categorizeCountries(array, pattern) {
+
+    if (array.some(ele => ele.includes(pattern))) {
+        console.log(array.filter(ele => ele.includes(pattern)))
+    }
+}
+categorizeCountries(countriesShort, 'land')
+categorizeCountries(countriesShort, 'n')
+//4 - da controllare
+function howManyTimes(array) {
+    let initials = []
+    console.log(array.map(ele => ele.charAt(0).toUpperCase()))
+
+
+}
+howManyTimes(countriesShort)
+//5 - da controllare
+function getFirstTenCountries(array) {
+}
+getFirstTenCountries(countries)
+//6 - da controllare
+function getLastTenCountries() {
+
+}
+getFirstTenCountries(countries)
+//7
+console.log(countries.map(ele => ele.name.charAt(0)).sort().filter(ele => ele.includes('E')))
+//LVL3
+//1
+console.log(countries.map(ele => ele.name).sort())
+console.log(countries.map(ele => ele.capital).sort())
+console.log(countries.map(ele => ele.population).sort((a, b) => a - b))
+//2 - da controllare
+function mostSpokenLanguages(arr, num) {
+
+}
+mostSpokenLanguages(countries, 10)
+//3 - da controllare
+function mostPopulatedCountries(countries, num) {
+    return countries.map(ele => ele.population).sort((a, b) => b - a)
+}
+console.log(mostPopulatedCountries(countries, 10))
+//4 - da controllare
+const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
