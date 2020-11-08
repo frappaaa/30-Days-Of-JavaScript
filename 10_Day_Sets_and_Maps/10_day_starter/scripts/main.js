@@ -39,3 +39,37 @@ console.log(intersection)
 console.log(new Set(a.filter((num) => !b.includes(num))))
 //LVL3
 //1
+let languagesArr = countries.map(country => country.languages), langArr = []
+for (let i = 0; i < languagesArr.length; i++) {
+    for (let y = 0; y < languagesArr[i].length; y++) {
+        langArr.push(languagesArr[i][y])
+    }
+}
+let setOfLang = new Set(langArr)
+console.log(setOfLang)
+//2 - da controllare
+function mostSpokenLanguages(arr, num) {
+    let languagesArr = arr.map(ele => ele.languages), langArr = [], counts = [], count = {}
+    for (let i = 0; i < languagesArr.length; i++) {
+        for (let y = 0; y < languagesArr[i].length; y++) {
+            langArr.push(languagesArr[i][y])
+        }
+    }
+    let setOfLang = new Set(langArr)
+    for (const l of setOfLang) {
+        const filteredLang = langArr.filter((lng) => lng === l)
+        counts.push({ lang: l, count: filteredLang.length })
+    }
+    counts.sort((a, b) => {
+        if (a.count < b.count) return 1
+        if (a.count > b.count) return -1
+        return 0
+    })
+    let arrayResult = []
+    for (let i = 0; i < num; i++) {
+        arrayResult.push(counts[i])
+    }
+    console.log(arrayResult)
+}
+mostSpokenLanguages(countries, 10)
+mostSpokenLanguages(countries, 3)
