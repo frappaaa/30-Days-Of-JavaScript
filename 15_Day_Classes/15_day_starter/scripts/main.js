@@ -1,5 +1,3 @@
-
-
 class Person {
   constructor(firstName, lastName, age, country, city) {
     this.firstName = firstName
@@ -31,7 +29,7 @@ class Person {
     let skills =
       this.skills.length > 0 &&
       this.skills.slice(0, this.skills.length - 1).join(', ') +
-        ` and ${this.skills[this.skills.length - 1]}`
+      ` and ${this.skills[this.skills.length - 1]}`
 
     let formattedSkills = skills ? `He knows ${skills}` : ''
 
@@ -63,7 +61,7 @@ class Student extends Person {
     let skills =
       this.skills.length > 0 &&
       this.skills.slice(0, this.skills.length - 1).join(', ') +
-        ` and ${this.skills[this.skills.length - 1]}`
+      ` and ${this.skills[this.skills.length - 1]}`
 
     let formattedSkills = skills ? `He knows ${skills}` : ''
     let pronoun = this.gender == 'Male' ? 'He' : 'She'
@@ -103,3 +101,36 @@ console.log(s1.getPersonInfo())
 console.log(s2.saySomething())
 console.log(s2.getFullName())
 console.log(s2.getPersonInfo())
+console.clear()
+//LVL1
+//1
+class Animal {
+  constructor(name, age, color, legs) {
+    this.name = name
+    this.age = age
+    this.color = color
+    this.legs = legs
+  }
+  getAnimalDesc() {
+    console.log('Questo animale è chiamato ' + this.name + ' e ha ' + this.age + ' anni. Ha un corpo di colore ' + this.color + ' e ha ' + this.legs + ' gambe.')
+  }
+}
+const animal = new Animal('gambero', 3, 'rosso', 1)
+animal.getAnimalDesc()
+//2
+class Dog extends Animal {
+  constructor(name, age, color, legs) {
+    super(name, age, color, legs = 4)
+  }
+}
+const dog = new Dog('Oliver', 13, 'nero')
+dog.getAnimalDesc()
+class Cat extends Animal {
+  constructor(name, age, color, legs = 4) {
+    super(name, age, color, legs = 4)
+  }
+}
+const cat = new Cat('micio', 12, 'bianco')
+cat.getAnimalDesc()
+//LVL2
+//1
