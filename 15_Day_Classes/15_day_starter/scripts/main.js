@@ -134,3 +134,65 @@ const cat = new Cat('micio', 12, 'bianco')
 cat.getAnimalDesc()
 //LVL2
 //1
+class Armadillo extends Animal {
+  constructor(name, age, color, legs) {
+    super(name, age, color, legs = 4)
+  }
+  getAnimalDesc() {
+    console.log('Ma questo è un Armadillooooooo')
+  }
+}
+const armadillo = new Armadillo
+armadillo.getAnimalDesc()
+//LVL3
+//1
+ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+class Statistics {
+  constructor(values) {
+    this.values = values
+  }
+  count() { }
+  sum() { }
+  min() { }
+  max() { }
+  range() { }
+  mean() { }
+  median() { }
+  mode() { }
+  var() { }
+  std() { }
+  freqDist() { }
+  describe() { }
+}
+
+let statistics = new Statistics(ages)
+console.log('Count:', statistics.count())
+console.log('Sum: ', statistics.sum())
+console.log('Min: ', statistics.min())
+console.log('Max: ', statistics.max())
+console.log('Range: ', statistics.range())
+console.log('Mean: ', statistics.mean())
+console.log('Median: ', statistics.median())
+console.log('Mode: ', statistics.mode())
+console.log('Variance: ', statistics.var())
+console.log('Standard Deviation: ', statistics.std())
+console.log('Variance: ', statistics.var())
+console.log('Frequency Distribution: ', statistics.freqDist())
+//2
+class PersonAccount {
+  constructor(firstname, lastname, incomes, expenses) {
+    this.firstName = firstname
+    this.lastName = lastname
+    this.incomes = incomes
+    this.expenses = expenses
+  }
+  totalIncome() { }
+  totalExpense() { }
+  accountInfo() { }
+  addIncome() { }
+  addExpense() { }
+  accountBalance() { }
+}
+let incomes = [{ income: 1000, desc: 'Lavoro' }, { income: 30, desc: 'regalo' }]
+let expenses = [{ expense: 4, desc: 'coop' }, { expense: 3, desc: 'frutta' }]
+const personAcc = new PersonAccount('Francesco', 'Luppi', incomes)
