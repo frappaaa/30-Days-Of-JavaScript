@@ -4,12 +4,30 @@
 <head>
     <title>30DaysOfJavaScript:11 Day </title>
 </head>
+<style>
+    @keyframes enter {
+        0% {
+            position: relative;
+            left: -20px;
+            opacity: .5;
+        }
+
+        100% {
+            position: relative;
+            left: 0px;
+            opacity: 1;
+        }
+    }
+
+    .skillsList h1 {
+        animation: enter 1s ease-in;
+    }
+</style>
 
 <body>
     <h1>30DaysOfJavaScript:11 Day</h1>
     <h2>Destructuring and Spread</h2>
 
-    <script src="./data/countries_data.js"></script>
     <script src="./scripts/main.js"></script>
 
 </body>
